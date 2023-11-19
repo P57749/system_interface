@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f1f1f1;
+}
+
+#container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#addButton {
+    top: 10px;
+    right: 10px;
+    background: #0e0b22;
+    color: #fff;
+}
+
+#redButton {
+    bottom: 10px;
+    right: 10px;
+    background: red;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background: #0e0b22;
+    margin: 5px;
+}
+#removeButton {
+    top: 70px;
+    right: 10px;
+    background: #0e0b22;
+    color: #fff;
+}
+#removeOptions {
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    display: none;
+}
