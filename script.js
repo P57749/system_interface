@@ -4,16 +4,27 @@ document.getElementById('addButton').addEventListener('click', function() {
     document.getElementById('squareForm').style.display = 'block';
 });
 
-
 document.getElementById('squareForm').addEventListener('submit', function(event) {
-   event.preventDefault();
-   var square = document.createElement('div');
-   square.className = 'square';
-   square.id = document.getElementById('squareId').value;
-   square.textContent = document.getElementById('squareId').value;
-   document.getElementById('squaresArea').appendChild(square);
-   document.getElementById('squareForm').style.display = 'none';
+  event.preventDefault();
+  var square = document.createElement('div');
+  square.className = 'square';
+  square.id = document.getElementById('squareId').value;
+  var idElement = document.createElement('p');
+  idElement.textContent = document.getElementById('squareId').value;
+  var statusCircle = document.createElement('div');
+  statusCircle.className = 'status-circle';
+  if (document.getElementById('squareId').value == 1) {
+     statusCircle.style.backgroundColor = 'green';
+  } else {
+     statusCircle.style.backgroundColor = 'red';
+  }
+  square.appendChild(statusCircle);
+  square.appendChild(idElement);
+  document.getElementById('squaresArea').appendChild(square);
+  document.getElementById('squareForm').style.display = 'none';
 });
+
+
 
 
 
