@@ -19,6 +19,7 @@ document.getElementById('addButton').addEventListener('click', function() {
 
 
 
+
 // Agrega un evento de clic a cada cuadrado para alternar la clase 'selected'
 // Agrega un evento de clic a cada cuadrado para alternar la clase 'selected'
 document.getElementById('squaresArea').addEventListener('click', function(event) {
