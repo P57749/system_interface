@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f1f1f1;
+    background-color: #fff;
 }
 
 #container {
@@ -59,18 +59,23 @@ body {
 }
 
 .square {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
-   width: 50px;
-   height: 50px;
-   background: #0e0b22;
-   margin: 5px;
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 16px;
+ width: 50px;
+ height: 50px;
+ background: #fff;
+ border: 1px solid #333;
+ border-radius: 10px;
+ color: #333;
+ margin: 20px; /* Aumenta el margen para crear una separación mayor entre los cuadrados */
 }
 
 
-.square::after {
+
+/* .square::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -78,7 +83,7 @@ body {
     width: 20px;
     height: 1px;
     background: #0e0b22;
-}
+} */
 
 .square:last-child::after {
     display: none;
@@ -115,5 +120,7 @@ body {
  height: 20px; /* Aumenta el tamaño del círculo */
  border-radius: 50%;
  background-color: green;
+ font-size: 16px;
+ color: #333;
 }
 
