@@ -6,15 +6,15 @@ document.getElementById('addButton').addEventListener('click', function() {
 
 
 document.getElementById('squareForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var square = document.createElement('div');
-    square.className = 'square';
-    square.id = document.getElementById('squareId').value;
-    square.style.background = document.getElementById('squareColor').value;
-    document.getElementById('squaresArea').appendChild(square);
-    document.getElementById('squareForm').style.display = 'none';
-    document.getElementById('squareColor').value = '';
+   event.preventDefault();
+   var square = document.createElement('div');
+   square.className = 'square';
+   square.id = document.getElementById('squareId').value;
+   square.textContent = document.getElementById('squareId').value;
+   document.getElementById('squaresArea').appendChild(square);
+   document.getElementById('squareForm').style.display = 'none';
 });
+
 
 
 
@@ -51,8 +51,8 @@ document.getElementById('removeOptions').addEventListener('change', function() {
 
 
 for (var i = 1; i <= 16; i++) {
-    var option = document.createElement('option');
-    option.value = i;
-    option.text = i;
-    document.getElementById('squareId').appendChild(option);
+   var option = document.createElement('option');
+   option.value = i;
+   option.text = i;
+   document.getElementById('squareId').appendChild(option);
 }
