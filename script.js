@@ -20,11 +20,13 @@ document.getElementById('addButton').addEventListener('click', function() {
 
 
 // Agrega un evento de clic a cada cuadrado para alternar la clase 'selected'
+// Agrega un evento de clic a cada cuadrado para alternar la clase 'selected'
 document.getElementById('squaresArea').addEventListener('click', function(event) {
     if (event.target.classList.contains('square')) {
         event.target.classList.toggle('selected');
     }
 });
+
 
 // Agrega un evento de clic al botón de eliminar para eliminar los cuadrados seleccionados
 // document.getElementById('removeButton').addEventListener('click', function() {
