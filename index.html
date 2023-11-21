@@ -13,21 +13,22 @@
             <select id="squareId"></select>
             <input type="submit" value="Aceptar">
         </form>
-        <div class="square">
+        <!-- <div class="square">
             <div class="status-circle"></div>
             <p>1</p>
-        </div>
+        </div> -->
 
 
 
         <button id="removeButton" class="button">-</button>
-        <select id="removeOptions" style="display: none;">
-            <option value="all">Borrar todos</option>
-            <option value="selected">Borrar seleccionados</option>
-        </select>
-        <div id="squaresArea">
-            
-        </div>
+        <form id="removeForm" style="display: none;">
+            <input type="radio" id="all" name="removeOption" value="all">
+            <label for="all">Todos</label><br>
+            <input type="radio" id="selected" name="removeOption" value="selected">
+            <label for="selected">Solo los seleccionados</label><br>
+            <input type="submit" value="Aceptar">
+        </form>
+        <div id="squaresArea"></div>
         <button id="redButton" class="button"></button>
     </div>
     <script src="script.js"></script>
