@@ -45,3 +45,23 @@ document.getElementById('searchInput').addEventListener('input', function() {
   }
 });
 
+
+
+var seconds = 0;
+var minutes = 0;
+var hours = 0;
+
+setInterval(function() {
+  seconds++;
+  if (seconds >= 60) {
+      seconds = 0;
+      minutes++;
+      if (minutes >= 60) {
+          minutes = 0;
+          hours++;
+      }
+  }
+  document.getElementById('timer').textContent = hours + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+}, 1000);
+
+
