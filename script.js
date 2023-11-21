@@ -22,3 +22,16 @@ ids.forEach(function(id) {
     square.appendChild(idElement);
     document.getElementById('squaresArea').appendChild(squareContainer);
 });
+
+//buscador
+document.getElementById('searchInput').addEventListener('input', function() {
+   var searchValue = this.value;
+   var squares = document.getElementsByClassName('square');
+   for (var i = 0; i < squares.length; i++) {
+       if (squares[i].id == searchValue) {
+           squares[i].style.display = 'block';
+       } else {
+           squares[i].style.display = 'none';
+       }
+   }
+});
