@@ -12,9 +12,9 @@ document.getElementById('squareForm').addEventListener('submit', function(event)
  var statusCircle = document.createElement('div');
  statusCircle.className = 'status-circle';
  if (document.getElementById('squareId').value == 1) {
-   statusCircle.style.backgroundColor = 'green';
+ statusCircle.style.backgroundColor = 'green';
  } else {
-   statusCircle.style.backgroundColor = 'red';
+ statusCircle.style.backgroundColor = 'red';
  }
  square.appendChild(statusCircle);
  var idElement = document.createElement('p');
@@ -23,12 +23,6 @@ document.getElementById('squareForm').addEventListener('submit', function(event)
  document.getElementById('squaresArea').appendChild(square);
  document.getElementById('squareForm').style.display = 'none';
 });
-
-
-
-
-
-
 
 
 // Agrega un evento de clic a cada cuadrado para alternar la clase 'selected'
@@ -63,8 +57,8 @@ document.getElementById('removeOptions').addEventListener('change', function() {
 
 
 for (var i = 1; i <= 16; i++) {
-   var option = document.createElement('option');
-   option.value = i;
-   option.text = i;
-   document.getElementById('squareId').appendChild(option);
+    var option = document.createElement('option');
+    option.value = i;
+    option.text = i;
+    document.getElementById('squareId').appendChild(option);
 }
