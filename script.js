@@ -34,27 +34,6 @@ document.getElementById('squaresArea').addEventListener('click', function(event)
 
 
 
-document.getElementById('removeButton').addEventListener('click', function() {
-    document.getElementById('removeForm').style.display = 'block';
-});
-
-document.getElementById('removeForm').addEventListener('change', function() {
-    var option = this.value;
-    if (option === 'all') {
-    var squaresArea = document.getElementById('squaresArea');
-    while (squaresArea.firstChild) {
-        squaresArea.removeChild(squaresArea.firstChild);
-    }
-    } else if (option === 'selected') {
-    var squares = document.querySelectorAll('.square.selected');
-    squares.forEach(function(square) {
-        square.parentNode.removeChild(square);
-    });
-    }
-  // Ocultar el select después de la acción
-    this.style.display = 'none';
-});
-
 
 for (var i = 1; i <= 16; i++) {
     var option = document.createElement('option');
@@ -62,3 +41,27 @@ for (var i = 1; i <= 16; i++) {
     option.text = i;
     document.getElementById('squareId').appendChild(option);
 }
+
+var ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
+
+ids.forEach(function(id) {
+    var squareContainer = document.createElement('div');
+    squareContainer.className = 'squareContainer';
+    var square = document.createElement('div');
+    square.className = 'square';
+    square.id = id;
+    var statusCircle = document.createElement('div');
+    statusCircle.className = 'status-circle';
+    if (id == 1) {
+        statusCircle.style.backgroundColor = 'green';
+    } else {
+        statusCircle.style.backgroundColor = 'red';
+    }
+    squareContainer.appendChild(square);
+    squareContainer.appendChild(statusCircle);
+    var idElement = document.createElement('p');
+    idElement.textContent = id;
+    square.appendChild(idElement);
+    document.getElementById('squaresArea').appendChild(squareContainer);
+});
