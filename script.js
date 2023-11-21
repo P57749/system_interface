@@ -41,17 +41,17 @@ document.getElementById('removeButton').addEventListener('click', function() {
 document.getElementById('removeForm').addEventListener('change', function() {
     var option = this.value;
     if (option === 'all') {
-        var squaresArea = document.getElementById('squaresArea');
-        while (squaresArea.firstChild) {
-            squaresArea.removeChild(squaresArea.firstChild);
-        }
-    } else if (option === 'selected') {
-        var squares = document.querySelectorAll('.square.selected');
-        squares.forEach(function(square) {
-            square.parentNode.removeChild(square);
-        });
+    var squaresArea = document.getElementById('squaresArea');
+    while (squaresArea.firstChild) {
+        squaresArea.removeChild(squaresArea.firstChild);
     }
-    // Ocultar el select después de la acción
+    } else if (option === 'selected') {
+    var squares = document.querySelectorAll('.square.selected');
+    squares.forEach(function(square) {
+        square.parentNode.removeChild(square);
+    });
+    }
+  // Ocultar el select después de la acción
     this.style.display = 'none';
 });
 
