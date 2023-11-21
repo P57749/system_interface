@@ -24,12 +24,6 @@ document.getElementById('squareForm').addEventListener('submit', function(event)
     document.getElementById('squareForm').style.display = 'none';
 });
 
-document.getElementById('removeButton').addEventListener('click', function() {
-   var deleteForm = document.getElementById('removeForm');
-   deleteForm.style.display = 'block';
-});
-
-
 
 // Agrega un evento de clic a cada cuadrado para alternar la clase 'selected'
 document.getElementById('squaresArea').addEventListener('click', function(event) {
@@ -41,10 +35,10 @@ document.getElementById('squaresArea').addEventListener('click', function(event)
 
 
 document.getElementById('removeButton').addEventListener('click', function() {
-    document.getElementById('removeOptions').style.display = 'block';
+    document.getElementById('removeForm').style.display = 'block';
 });
 
-document.getElementById('removeOptions').addEventListener('change', function() {
+document.getElementById('removeForm').addEventListener('change', function() {
     var option = this.value;
     if (option === 'all') {
         var squaresArea = document.getElementById('squaresArea');
