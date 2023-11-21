@@ -1,10 +1,3 @@
-// Agrega un evento de clic a cada cuadrado para alternar la clase 'selected'
-document.getElementById('squaresArea').addEventListener('click', function(event) {
-    if (event.target.classList.contains('square')) {
-        event.target.classList.toggle('selected');
-    }
-});
-
 
 var ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
