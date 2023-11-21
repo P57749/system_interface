@@ -53,10 +53,15 @@ body {
 }
 
 #squaresArea {
+    position: absolute;
+    left: 0;
+    height: 90%;
+    overflow: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
+
 
 .square {
  position: relative;
@@ -113,3 +118,36 @@ body {
  color: #333;
 }
 
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    font-family: 'Helvetica', sans-serif;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    clear: both;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+form input[type="radio"] {
+   float: left;
+}
+
+form label {
+   float: right;
+}
