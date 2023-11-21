@@ -107,7 +107,7 @@ body {
 }
 .status-circle {
  position: absolute;
- top: -25px; /* Mueve el círculo arriba del cuadrado */
+ top: -10px; /* Mueve el círculo arriba del cuadrado */
  left: 50%;
  transform: translate(-50%, -50%);
  width: 20px; /* Aumenta el tamaño del círculo */
@@ -116,6 +116,11 @@ body {
  background-color: green;
  font-size: 16px;
  color: #333;
+ /* position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; */
 }
 
 
