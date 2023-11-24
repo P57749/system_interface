@@ -73,12 +73,12 @@ setInterval(function() {
 
 
 document.getElementById('startButton').addEventListener('click', function() {
- var timeInput = document.getElementById('timeInput').value;
- var timeParts = timeInput.split(':');
- var hours = parseInt(timeParts[0]);
- var minutes = parseInt(timeParts[1]);
- var seconds = parseInt(timeParts[2]);
- startTimer(hours, minutes, seconds);
+    var timeInput = document.getElementById('timeInput').value;
+    var timeParts = timeInput.split(':');
+    var hours = parseInt(timeParts[0]);
+    var minutes = parseInt(timeParts[1]);
+    var seconds = parseInt(timeParts[2]);
+    startTimer(hours, minutes, seconds);
 });
 
 
