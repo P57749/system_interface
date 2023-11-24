@@ -1,13 +1,17 @@
 
 var ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
+var initialState = null;
+
 
 ids.forEach(function(id) {
    var squareContainer = document.createElement('div');
    squareContainer.className = 'squareContainer';
    var square = document.createElement('div');
    square.className = 'square';
-   square.id = id;
+    square.id = id;
+    square.setAttribute('draggable', 'true'); // Hacer el cuadrado arrastrable
+    square.setAttribute('ondragstart', 'drag(event)'); // Asignar el evento ondragstart
    var statusCircle = document.createElement('div');
    statusCircle.className = 'status-circle';
    if (id == 1 || id == 4 || id == 5) {
@@ -20,6 +24,7 @@ ids.forEach(function(id) {
    idElement.textContent = id;
    square.appendChild(idElement);
    squareContainer.appendChild(square);
+   
    document.getElementById('squaresArea').appendChild(squareContainer);
 });
 
@@ -65,3 +70,31 @@ setInterval(function() {
 }, 1000);
 
 
+
+
+document.getElementById('startButton').addEventListener('click', function() {
+ var timeInput = document.getElementById('timeInput').value;
+ var timeParts = timeInput.split(':');
+ var hours = parseInt(timeParts[0]);
+ var minutes = parseInt(timeParts[1]);
+ var seconds = parseInt(timeParts[2]);
+ startTimer(hours, minutes, seconds);
+});
+
+
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+ ev.preventDefault();
+ var data = ev.dataTransfer.getData("text");
+ var element = document.getElementById(data);
+ element.style.margin = '10px';
+ ev.target.appendChild(element);
+}

@@ -7,16 +7,25 @@
 </head>
 
 <body>
-    <div id="container">
+    <div id="container">d
         <div id="timer">0:00.00</div>
 
         <!-- <input type="text" id="searchInput" placeholder="Buscar por ID"> -->
-        <div id="squaresArea" >
+        <div id="squaresArea" ondrop="drop(event)" ondragover="allowDrop(event)">
             <input type="text" id="searchInput" placeholder="Buscar por ID">
             <!-- Los cuadrados se agregarán aquí -->
+            
+        </div>
+        <div id="containerr" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div>
+                
+            </div>
         </div>
 
-        <button id="redButton" class="button"></button>
+
+        <!-- <button id="startButton">Iniciar</button>
+        <input type="text" id="timeInput" placeholder="Introduce el tiempo en formato HH:MM:SS"> -->
+        <div id="timer">0:00.00</div>
     </div>
     <script src="script.js"></script>
 </body>
